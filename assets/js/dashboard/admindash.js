@@ -316,21 +316,29 @@ async function rejects(rappId) {
 function initialize() {
   // Your existing code here...
 
-  // Add functions for Reject and Approve actions
-  window.reject = async function(rappId) {
-    await rejects(rappId);
-    // Add any additional logic after rejecting
-  }
+ // Add functions for Reject and Approve actions
+ window.reject = async function(rappId) {
+  await rejects(rappId);
+  // Add any additional logic after rejecting
+  refreshPage(); // Add this line to refresh the page
+}
 
-  window.approve = async function(rappId) {
-    await approve(rappId);
-    // Add any additional logic after approving
-  }
+window.approve = async function(rappId) {
+  await approve(rappId);
+  // Add any additional logic after approving
+  refreshPage(); // Add this line to refresh the page
+}
 
-  window.delete = async function(rappId) {
-    await deleteRequest(rappId);
-    // Add any additional logic after approving
-  }
+window.delete = async function(rappId) {
+  await deleteRequest(rappId);
+  // Add any additional logic after deleting
+  refreshPage(); // Add this line to refresh the page
+}
+
+function refreshPage() {
+  // Reload the current page
+  location.reload();
+}
 
 }
 
