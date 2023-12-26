@@ -7,6 +7,7 @@ btn_logout.onclick = async () => {
   const response = await fetch(backendURL + "/api/logout", {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
@@ -39,6 +40,7 @@ async function getAvailaJobs(keyword = "") {
   const response = await fetch(backendURL + "/api/job?keyword=" + keyword, {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });

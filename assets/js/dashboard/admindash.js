@@ -6,6 +6,7 @@ btn_logout.onclick = async () => {
   const response = await fetch(backendURL + "/api/logout", {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
@@ -35,6 +36,7 @@ async function getAllProccessingReq() {
   const response = await fetch(backendURL + "/api/rappP", {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
@@ -104,6 +106,7 @@ async function getAllApproveReq() {
   const response = await fetch(backendURL + "/api/rappA", {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
@@ -171,6 +174,7 @@ async function getAllRejectReq() {
   const response = await fetch(backendURL + "/api/rappR", {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
@@ -237,6 +241,7 @@ async function deleteRequest(rappId) {
       method: "DELETE",
       headers: {
         Accept: "application/json",
+        "ngrok-skip-browser-warning": "69420",
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
     });
@@ -259,6 +264,7 @@ async function approve(rappId) {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "69420",
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
       body: JSON.stringify({
@@ -285,6 +291,7 @@ async function rejects(rappId) {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "69420",
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
       body: JSON.stringify({

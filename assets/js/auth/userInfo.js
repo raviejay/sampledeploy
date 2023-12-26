@@ -25,6 +25,7 @@ form_userInfo.onsubmit = async (e) => {
     method: "POST",
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
     body: formData,

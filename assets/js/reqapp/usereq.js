@@ -6,6 +6,7 @@ btn_logout.onclick = async () => {
   const response = await fetch(backendURL + "/api/logout", {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
@@ -31,12 +32,12 @@ btn_logout.onclick = async () => {
 
 
 getUserReq();
-
 async function getUserReq() {
   // Access User Profile API Endpoint
   const response = await fetch(backendURL + "/api/rapp", {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });

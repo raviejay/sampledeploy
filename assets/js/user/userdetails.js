@@ -34,6 +34,7 @@ async function getUserDetails() {
   const response = await fetch(backendURL + "/api/info/" + localStorage.getItem("acc_id"), {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
